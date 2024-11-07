@@ -1,6 +1,6 @@
 import numpy as np
 import random
-from constraints import classes, days, periods_jr_sr_kg, periods_grade_1, subjects, teachers, HOMEROOM, teacher_assignments, subject_constraints
+from constraints import classes, days, periods_jr_sr_kg, periods_grade_1, teacher_assignments, subject_constraints
 
 # Define the dimensions for the tensor
 weeks = 2
