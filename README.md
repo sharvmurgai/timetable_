@@ -1,83 +1,103 @@
-Example Output:
---- Jr. KG C - Week 1 ---
-Monday:
-    Period 1: Environmental Education by Shireen
-    Period 2: EVS by Shireen
-    Period 3: Circle Time by Shireen
-    Period 4: DEED by Isha
-    Period 5: Physical Education by Beena
-    Period 6: English by Shireen
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{longtable}
 
-Tuesday:
-    Period 1: Assembly by Shireen
-    Period 2: Role Play by Shireen
-    Period 3: Physical Education by Beena
-    Period 4: Mathematics by Shireen
-    Period 5: English by Shireen
-    Period 6: Hindi by Shireen
+\begin{document}
 
-Wednesday:
-    Period 1: Art by Shireen
-    Period 2: Hindi by Shireen
-    Period 3: English by Shireen
-    Period 4: Art by Shireen
-    Period 5: Clay Modeling by Shridevi
-    Period 6: EVS by Shireen
+\section*{Jr. KG C - Week 1}
 
-Thursday:
-    Period 1: Computer Studies by Sayantani
-    Period 2: Mathematics by Shireen
-    Period 3: Yoga by New Sports Tr
-    Period 4: English by Shireen
-    Period 5: Play Pen by Shireen
-    Period 6: Library by Pooja S
+\begin{longtable}{|l|l|l|l|l|l|l|}
+\hline
+\textbf{Day} & \textbf{Period 1} & \textbf{Period 2} & \textbf{Period 3} & \textbf{Period 4} & \textbf{Period 5} & \textbf{Period 6} \\
+\hline
+Monday &
+Environmental Education by Shireen &
+EVS by Shireen &
+Circle Time by Shireen &
+DEED by Isha &
+Physical Education by Beena &
+English by Shireen \\
+\hline
+Tuesday &
+Assembly by Shireen &
+Role Play by Shireen &
+Physical Education by Beena &
+Mathematics by Shireen &
+English by Shireen &
+Hindi by Shireen \\
+\hline
+Wednesday &
+Art by Shireen &
+Hindi by Shireen &
+English by Shireen &
+Art by Shireen &
+Clay Modeling by Shridevi &
+EVS by Shireen \\
+\hline
+Thursday &
+Computer Studies by Sayantani &
+Mathematics by Shireen &
+Yoga by New Sports Tr &
+English by Shireen &
+Play Pen by Shireen &
+Library by Pooja S \\
+\hline
+Friday &
+Mathematics by Shireen &
+Mathematics by Shireen &
+Dance by Pooja B &
+Life Skills by Vanita J &
+Environmental Education by Shireen &
+Wonder Time by Neesha R \\
+\hline
+\end{longtable}
 
-Friday:
-    Period 1: Mathematics by Shireen
-    Period 2: Mathematics by Shireen
-    Period 3: Dance by Pooja B
-    Period 4: Life Skills by Vanita J
-    Period 5: Environmental Education by Shireen
-    Period 6: Wonder Time by Neesha R
+\section*{Jr. KG C - Week 2}
 
+\begin{longtable}{|l|l|l|l|l|l|l|}
+\hline
+\textbf{Day} & \textbf{Period 1} & \textbf{Period 2} & \textbf{Period 3} & \textbf{Period 4} & \textbf{Period 5} & \textbf{Period 6} \\
+\hline
+Monday &
+Hindi by Shireen &
+Physical Education by Beena &
+Art by Shireen &
+Physical Education by Beena &
+DEED by Isha &
+English by Shireen \\
+\hline
+Tuesday &
+Hindi by Shireen &
+Dance by Pooja B &
+Mathematics by Shireen &
+Environmental Education by Shireen &
+Mathematics by Shireen &
+English by Shireen \\
+\hline
+Wednesday &
+EVS by Shireen &
+English by Shireen &
+Art by Shireen &
+Clay Modeling by Shridevi &
+English by Shireen &
+Assembly by Shireen \\
+\hline
+Thursday &
+Mathematics by Shireen &
+Hindi by Shireen &
+Music by Shlok &
+Environmental Education by Shireen &
+Mathematics by Shireen &
+Hindi by Shireen \\
+\hline
+Friday &
+EVS by Shireen &
+English by Shireen &
+Assembly by Shireen &
+Hindi by Shireen &
+Hindi by Shireen &
+English by Shireen \\
+\hline
+\end{longtable}
 
---- Jr. KG C - Week 2 ---
-Monday:
-    Period 1: Hindi by Shireen
-    Period 2: Physical Education by Beena
-    Period 3: Art by Shireen
-    Period 4: Physical Education by Beena
-    Period 5: DEED by Isha
-    Period 6: English by Shireen
-
-Tuesday:
-    Period 1: Hindi by Shireen
-    Period 2: Dance by Pooja B
-    Period 3: Mathematics by Shireen
-    Period 4: Environmental Education by Shireen
-    Period 5: Mathematics by Shireen
-    Period 6: English by Shireen
-
-Wednesday:
-    Period 1: EVS by Shireen
-    Period 2: English by Shireen
-    Period 3: Art by Shireen
-    Period 4: Clay Modeling by Shridevi
-    Period 5: English by Shireen
-    Period 6: Assembly by Shireen
-
-Thursday:
-    Period 1: Mathematics by Shireen
-    Period 2: Hindi by Shireen
-    Period 3: Music by Shlok
-    Period 4: Environmental Education by Shireen
-    Period 5: Mathematics by Shireen
-    Period 6: Hindi by Shireen
-
-Friday:
-    Period 1: EVS by Shireen
-    Period 2: English by Shireen
-    Period 3: Assembly by Shireen
-    Period 4: Hindi by Shireen
-    Period 5: Hindi by Shireen
-    Period 6: English by Shireen
+\end{document}
