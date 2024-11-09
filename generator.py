@@ -11,7 +11,7 @@ num_classes = len(classes)  # 12 classes
 def periods_per_day(class_name):
     return periods_grade_1 if class_name.startswith('1') else periods_jr_sr_kg
 
-# Initialize a 5D tensor with None as placeholder for each period
+# Initialize a 5D tensor with None as a placeholder for each period
 timetable = np.empty((weeks, num_days, max(periods_jr_sr_kg, periods_grade_1), num_classes), dtype=object)
 
 # Helper function to get teacher for a specific subject and class
@@ -26,49 +26,48 @@ for class_idx, class_name in enumerate(classes):
     # Determine class level (Jr. KG, Sr. KG, or Grade 1) for frequency lookup
     class_level = '1' if class_name.startswith('1') else 'Jr. KG' if 'Jr. KG' in class_name else 'Sr. KG'
     total_periods = periods_per_day(class_name) * num_days * weeks
-    
+
     # Generate a list of subjects according to frequency requirements
     subject_list = []
     for subject, levels in subject_constraints.items():
         if class_level in levels:
             frequency = levels[class_level]
             teacher = get_teacher_for_subject(class_name, subject)
-            
-            # Split periods evenly or as close to even as possible between weeks
-            if frequency % 2 == 0:
-                week_frequency = frequency // 2
-                subject_list.extend([(subject, teacher, 0)] * week_frequency)  # Assign for week 0
-                subject_list.extend([(subject, teacher, 1)] * week_frequency)  # Assign for week 1
-            else:
-                week_0_freq = (frequency // 2) + 1
-                week_1_freq = frequency // 2
-                subject_list.extend([(subject, teacher, 0)] * week_0_freq)  # Assign majority to week 0
-                subject_list.extend([(subject, teacher, 1)] * week_1_freq)  # Assign remainder to week 1
 
-    # Shuffle the subject list to distribute randomly across periods
+            # Split periods equally, or assign one extra to a random week if frequency is odd
+            week_0_freq = (frequency // 2) + (frequency % 2 if random.choice([True, False]) else 0)
+            week_1_freq = frequency - week_0_freq
+            subject_list.extend([(subject, teacher, 0)] * week_0_freq)
+            subject_list.extend([(subject, teacher, 1)] * week_1_freq)
+
+    # Shuffle subject list for random distribution across periods
     random.shuffle(subject_list)
-    subject_list = subject_list[:total_periods]  # Ensure we only have enough subjects for the schedule
-    
-    # Fill the timetable for each week and day
-    period_counter = 0
+
+    # Fill timetable with constraints
     for week in range(weeks):
         week_schedule = [s for s in subject_list if s[2] == week]
-        random.shuffle(week_schedule)  # Shuffle within each week for variety
+        random.shuffle(week_schedule)
 
-        # Fill in periods for the week
+        # Day and period control to meet constraints on repetition
+        day_schedule = {day: [] for day in range(num_days)}
+
         period_idx = 0
         for day in range(num_days):
-            for period in range(periods_per_day(class_name)):
-                if period_idx < len(week_schedule):
-                    subject, teacher, _ = week_schedule[period_idx]
-                    timetable[week, day, period, class_idx] = {'subject': subject, 'teacher': teacher}
-                    period_idx += 1
-                else:
-                    # Attempt to allocate any free periods with subjects that have unmet constraints
-                    remaining_subjects = [s for s in subject_list if s[2] == week]
-                    if remaining_subjects:
-                        subject, teacher, _ = random.choice(remaining_subjects)
-                        timetable[week, day, period, class_idx] = {'subject': subject, 'teacher': teacher}
+            periods_in_day = periods_per_day(class_name)
+            day_fill = 0
+
+            while day_fill < periods_in_day:
+                if period_idx >= len(week_schedule):
+                    period_idx = 0
+                    random.shuffle(week_schedule)
+
+                subject, teacher, _ = week_schedule[period_idx]
+                if (class_level == '1' and day_schedule[day].count(subject) < 2) or \
+                   (class_level != '1' and day_schedule[day].count(subject) < 1):
+                    timetable[week, day, day_fill, class_idx] = {'subject': subject, 'teacher': teacher}
+                    day_schedule[day].append(subject)
+                    day_fill += 1
+                period_idx += 1
 
 # Function to print the generated timetable for a specific class
 def print_timetable(class_name):
