@@ -28,9 +28,9 @@ teachers = [
 
 # Homeroom assignments for each class
 HOMEROOM = {
-    'Jr. KG A': 'Nupur FT', 'Jr. KG B': 'Maria', 'Jr. KG C': 'Shireen', 'Jr. KG D': 'Sheetal',
-    'Sr. KG A': 'Ruksaar', 'Sr. KG B': 'Bhakti', 'Sr. KG C': 'Shubha FT', 'Sr. KG D': 'Ankita',
-    '1A': 'Remya', '1B': 'Kanak', '1C': 'Rishita', '1D': 'Charu'
+    'Jr. KG A': ['Nupur FT', 'Pooja R'], 'Jr. KG B': ['Maria', 'Banu'], 'Jr. KG C': ['Shireen', 'Riya J'], 'Jr. KG D': ['Sheetal', 'Anjum'],
+    'Sr. KG A': ['Ruksaar', 'Darshana'], 'Sr. KG B': ['Bhakti', 'Laxmipriya'], 'Sr. KG C': ['Shubha FT', 'Priyanka'], 'Sr. KG D': ['Ankita', 'Jyoti V'],
+    '1A': ['Remya', 'Saraswati -FT'], '1B': ['Kanak', 'Matilda'], '1C': ['Rishita', 'Shashwati'], '1D': ['Charu', 'Maariyah']
 }
 
 # Teacher assignments per subject and class
@@ -50,14 +50,14 @@ teacher_assignments = [
     {'subject': 'English', 'class': '1D', 'teachers': ['Charu', 'Maariyah']},
 
     # Hindi Teachers (Homeroom)
-    {'subject': 'Hindi', 'class': 'Jr. KG A', 'teachers': [HOMEROOM['Jr. KG A']]},
-    {'subject': 'Hindi', 'class': 'Jr. KG B', 'teachers': [HOMEROOM['Jr. KG B']]},
-    {'subject': 'Hindi', 'class': 'Jr. KG C', 'teachers': [HOMEROOM['Jr. KG C']]},
-    {'subject': 'Hindi', 'class': 'Jr. KG D', 'teachers': [HOMEROOM['Jr. KG D']]},
-    {'subject': 'Hindi', 'class': 'Sr. KG A', 'teachers': [HOMEROOM['Sr. KG A']]},
-    {'subject': 'Hindi', 'class': 'Sr. KG B', 'teachers': [HOMEROOM['Sr. KG B']]},
-    {'subject': 'Hindi', 'class': 'Sr. KG C', 'teachers': [HOMEROOM['Sr. KG C']]},
-    {'subject': 'Hindi', 'class': 'Sr. KG D', 'teachers': [HOMEROOM['Sr. KG D']]},
+    {'subject': 'Hindi', 'class': 'Jr. KG A', 'teachers': HOMEROOM['Jr. KG A']},
+    {'subject': 'Hindi', 'class': 'Jr. KG B', 'teachers': HOMEROOM['Jr. KG B']},
+    {'subject': 'Hindi', 'class': 'Jr. KG C', 'teachers': HOMEROOM['Jr. KG C']},
+    {'subject': 'Hindi', 'class': 'Jr. KG D', 'teachers': HOMEROOM['Jr. KG D']},
+    {'subject': 'Hindi', 'class': 'Sr. KG A', 'teachers': HOMEROOM['Sr. KG A']},
+    {'subject': 'Hindi', 'class': 'Sr. KG B', 'teachers': HOMEROOM['Sr. KG B']},
+    {'subject': 'Hindi', 'class': 'Sr. KG C', 'teachers': HOMEROOM['Sr. KG C']},
+    {'subject': 'Hindi', 'class': 'Sr. KG D', 'teachers': HOMEROOM['Sr. KG D']},
     {'subject': 'Hindi', 'class': '1A', 'teachers': ['Reshma']},
     {'subject': 'Hindi', 'class': '1B', 'teachers': ['Reshma']},
     {'subject': 'Hindi', 'class': '1C', 'teachers': ['Santosh K']},
@@ -70,46 +70,46 @@ teacher_assignments = [
     {'subject': 'Marathi', 'class': '1D', 'teachers': ['Santosh K']},
 
     # Mathematics Teachers (Homeroom)
-    {'subject': 'Mathematics', 'class': 'Jr. KG A', 'teachers': [HOMEROOM['Jr. KG A']]},
-    {'subject': 'Mathematics', 'class': 'Jr. KG B', 'teachers': [HOMEROOM['Jr. KG B']]},
-    {'subject': 'Mathematics', 'class': 'Jr. KG C', 'teachers': [HOMEROOM['Jr. KG C']]},
-    {'subject': 'Mathematics', 'class': 'Jr. KG D', 'teachers': [HOMEROOM['Jr. KG D']]},
-    {'subject': 'Mathematics', 'class': 'Sr. KG A', 'teachers': [HOMEROOM['Sr. KG A']]},
-    {'subject': 'Mathematics', 'class': 'Sr. KG B', 'teachers': [HOMEROOM['Sr. KG B']]},
-    {'subject': 'Mathematics', 'class': 'Sr. KG C', 'teachers': [HOMEROOM['Sr. KG C']]},
-    {'subject': 'Mathematics', 'class': 'Sr. KG D', 'teachers': [HOMEROOM['Sr. KG D']]},
-    {'subject': 'Mathematics', 'class': '1A', 'teachers': [HOMEROOM['1A']]},
-    {'subject': 'Mathematics', 'class': '1B', 'teachers': [HOMEROOM['1B']]},
-    {'subject': 'Mathematics', 'class': '1C', 'teachers': [HOMEROOM['1C']]},
-    {'subject': 'Mathematics', 'class': '1D', 'teachers': [HOMEROOM['1D']]},
+    {'subject': 'Mathematics', 'class': 'Jr. KG A', 'teachers': HOMEROOM['Jr. KG A']},
+    {'subject': 'Mathematics', 'class': 'Jr. KG B', 'teachers': HOMEROOM['Jr. KG B']},
+    {'subject': 'Mathematics', 'class': 'Jr. KG C', 'teachers': HOMEROOM['Jr. KG C']},
+    {'subject': 'Mathematics', 'class': 'Jr. KG D', 'teachers': HOMEROOM['Jr. KG D']},
+    {'subject': 'Mathematics', 'class': 'Sr. KG A', 'teachers': HOMEROOM['Sr. KG A']},
+    {'subject': 'Mathematics', 'class': 'Sr. KG B', 'teachers': HOMEROOM['Sr. KG B']},
+    {'subject': 'Mathematics', 'class': 'Sr. KG C', 'teachers': HOMEROOM['Sr. KG C']},
+    {'subject': 'Mathematics', 'class': 'Sr. KG D', 'teachers': HOMEROOM['Sr. KG D']},
+    {'subject': 'Mathematics', 'class': '1A', 'teachers': HOMEROOM['1A']},
+    {'subject': 'Mathematics', 'class': '1B', 'teachers': HOMEROOM['1B']},
+    {'subject': 'Mathematics', 'class': '1C', 'teachers': HOMEROOM['1C']},
+    {'subject': 'Mathematics', 'class': '1D', 'teachers': HOMEROOM['1D']},
 
     # EVS Teachers (Homeroom)
-    {'subject': 'EVS', 'class': 'Jr. KG A', 'teachers': [HOMEROOM['Jr. KG A']]},
-    {'subject': 'EVS', 'class': 'Jr. KG B', 'teachers': [HOMEROOM['Jr. KG B']]},
-    {'subject': 'EVS', 'class': 'Jr. KG C', 'teachers': [HOMEROOM['Jr. KG C']]},
-    {'subject': 'EVS', 'class': 'Jr. KG D', 'teachers': [HOMEROOM['Jr. KG D']]},
-    {'subject': 'EVS', 'class': 'Sr. KG A', 'teachers': [HOMEROOM['Sr. KG A']]},
-    {'subject': 'EVS', 'class': 'Sr. KG B', 'teachers': [HOMEROOM['Sr. KG B']]},
-    {'subject': 'EVS', 'class': 'Sr. KG C', 'teachers': [HOMEROOM['Sr. KG C']]},
-    {'subject': 'EVS', 'class': 'Sr. KG D', 'teachers': [HOMEROOM['Sr. KG D']]},
+    {'subject': 'EVS', 'class': 'Jr. KG A', 'teachers': HOMEROOM['Jr. KG A']},
+    {'subject': 'EVS', 'class': 'Jr. KG B', 'teachers': HOMEROOM['Jr. KG B']},
+    {'subject': 'EVS', 'class': 'Jr. KG C', 'teachers': HOMEROOM['Jr. KG C']},
+    {'subject': 'EVS', 'class': 'Jr. KG D', 'teachers': HOMEROOM['Jr. KG D']},
+    {'subject': 'EVS', 'class': 'Sr. KG A', 'teachers': HOMEROOM['Sr. KG A']},
+    {'subject': 'EVS', 'class': 'Sr. KG B', 'teachers': HOMEROOM['Sr. KG B']},
+    {'subject': 'EVS', 'class': 'Sr. KG C', 'teachers': HOMEROOM['Sr. KG C']},
+    {'subject': 'EVS', 'class': 'Sr. KG D', 'teachers': HOMEROOM['Sr. KG D']},
     {'subject': 'EVS', 'class': '1A', 'teachers': ['Reshma']},
     {'subject': 'EVS', 'class': '1B', 'teachers': ['Reshma']},
     {'subject': 'EVS', 'class': '1C', 'teachers': ['Santosh K']},
     {'subject': 'EVS', 'class': '1D', 'teachers': ['Santosh K']},
 
     # Environmental Education Teachers (Homeroom)
-    {'subject': 'Environmental Education', 'class': 'Jr. KG A', 'teachers': [HOMEROOM['Jr. KG A']]},
-    {'subject': 'Environmental Education', 'class': 'Jr. KG B', 'teachers': [HOMEROOM['Jr. KG B']]},
-    {'subject': 'Environmental Education', 'class': 'Jr. KG C', 'teachers': [HOMEROOM['Jr. KG C']]},
-    {'subject': 'Environmental Education', 'class': 'Jr. KG D', 'teachers': [HOMEROOM['Jr. KG D']]},
-    {'subject': 'Environmental Education', 'class': 'Sr. KG A', 'teachers': [HOMEROOM['Sr. KG A']]},
-    {'subject': 'Environmental Education', 'class': 'Sr. KG B', 'teachers': [HOMEROOM['Sr. KG B']]},
-    {'subject': 'Environmental Education', 'class': 'Sr. KG C', 'teachers': [HOMEROOM['Sr. KG C']]},
-    {'subject': 'Environmental Education', 'class': 'Sr. KG D', 'teachers': [HOMEROOM['Sr. KG D']]},
-    {'subject': 'Environmental Education', 'class': '1A', 'teachers': [HOMEROOM['1A']]},
-    {'subject': 'Environmental Education', 'class': '1B', 'teachers': [HOMEROOM['1B']]},
-    {'subject': 'Environmental Education', 'class': '1C', 'teachers': [HOMEROOM['1C']]},
-    {'subject': 'Environmental Education', 'class': '1D', 'teachers': [HOMEROOM['1D']]},
+    {'subject': 'Environmental Education', 'class': 'Jr. KG A', 'teachers': HOMEROOM['Jr. KG A']},
+    {'subject': 'Environmental Education', 'class': 'Jr. KG B', 'teachers': HOMEROOM['Jr. KG B']},
+    {'subject': 'Environmental Education', 'class': 'Jr. KG C', 'teachers': HOMEROOM['Jr. KG C']},
+    {'subject': 'Environmental Education', 'class': 'Jr. KG D', 'teachers': HOMEROOM['Jr. KG D']},
+    {'subject': 'Environmental Education', 'class': 'Sr. KG A', 'teachers': HOMEROOM['Sr. KG A']},
+    {'subject': 'Environmental Education', 'class': 'Sr. KG B', 'teachers': HOMEROOM['Sr. KG B']},
+    {'subject': 'Environmental Education', 'class': 'Sr. KG C', 'teachers': HOMEROOM['Sr. KG C']},
+    {'subject': 'Environmental Education', 'class': 'Sr. KG D', 'teachers': HOMEROOM['Sr. KG D']},
+    {'subject': 'Environmental Education', 'class': '1A', 'teachers': HOMEROOM['1A']},
+    {'subject': 'Environmental Education', 'class': '1B', 'teachers': HOMEROOM['1B']},
+    {'subject': 'Environmental Education', 'class': '1C', 'teachers': HOMEROOM['1C']},
+    {'subject': 'Environmental Education', 'class': '1D', 'teachers': HOMEROOM['1D']},
 
     # Computer Studies Teachers
     {'subject': 'Computer Studies', 'class': 'Jr. KG A', 'teachers': ['Sayantani']},
@@ -139,19 +139,19 @@ teacher_assignments = [
     {'subject': 'Physical Education', 'class': '1C', 'teachers': ['Priyanka A']},
     {'subject': 'Physical Education', 'class': '1D', 'teachers': ['Naval']},
 
-    # Circle Time Teachers (Homeroom)
-    {'subject': 'Circle Time', 'class': 'Jr. KG A', 'teachers': [HOMEROOM['Jr. KG A']]},
-    {'subject': 'Circle Time', 'class': 'Jr. KG B', 'teachers': [HOMEROOM['Jr. KG B']]},
-    {'subject': 'Circle Time', 'class': 'Jr. KG C', 'teachers': [HOMEROOM['Jr. KG C']]},
-    {'subject': 'Circle Time', 'class': 'Jr. KG D', 'teachers': [HOMEROOM['Jr. KG D']]},
-    {'subject': 'Circle Time', 'class': 'Sr. KG A', 'teachers': [HOMEROOM['Sr. KG A']]},
-    {'subject': 'Circle Time', 'class': 'Sr. KG B', 'teachers': [HOMEROOM['Sr. KG B']]},
-    {'subject': 'Circle Time', 'class': 'Sr. KG C', 'teachers': [HOMEROOM['Sr. KG C']]},
-    {'subject': 'Circle Time', 'class': 'Sr. KG D', 'teachers': [HOMEROOM['Sr. KG D']]},
-    {'subject': 'Circle Time', 'class': '1A', 'teachers': [HOMEROOM['1A']]},
-    {'subject': 'Circle Time', 'class': '1B', 'teachers': [HOMEROOM['1B']]},
-    {'subject': 'Circle Time', 'class': '1C', 'teachers': [HOMEROOM['1C']]},
-    {'subject': 'Circle Time', 'class': '1D', 'teachers': [HOMEROOM['1D']]},
+    # Circle Time Teachers Homerom)
+    {'subject': 'Circle Time', 'class': 'Jr. KG A', 'teachers': HOMEROOM['Jr. KG A']},
+    {'subject': 'Circle Time', 'class': 'Jr. KG B', 'teachers': HOMEROOM['Jr. KG B']},
+    {'subject': 'Circle Time', 'class': 'Jr. KG C', 'teachers': HOMEROOM['Jr. KG C']},
+    {'subject': 'Circle Time', 'class': 'Jr. KG D', 'teachers': HOMEROOM['Jr. KG D']},
+    {'subject': 'Circle Time', 'class': 'Sr. KG A', 'teachers': HOMEROOM['Sr. KG A']},
+    {'subject': 'Circle Time', 'class': 'Sr. KG B', 'teachers': HOMEROOM['Sr. KG B']},
+    {'subject': 'Circle Time', 'class': 'Sr. KG C', 'teachers': HOMEROOM['Sr. KG C']},
+    {'subject': 'Circle Time', 'class': 'Sr. KG D', 'teachers': HOMEROOM['Sr. KG D']},
+    {'subject': 'Circle Time', 'class': '1A', 'teachers': HOMEROOM['1A']},
+    {'subject': 'Circle Time', 'class': '1B', 'teachers': HOMEROOM['1B']},
+    {'subject': 'Circle Time', 'class': '1C', 'teachers': HOMEROOM['1C']},
+    {'subject': 'Circle Time', 'class': '1D', 'teachers': HOMEROOM['1D']},
 
     # Life Skills Teachers
     {'subject': 'Life Skills', 'class': 'Jr. KG A', 'teachers': ['Vanita J']},
@@ -168,14 +168,14 @@ teacher_assignments = [
     {'subject': 'Life Skills', 'class': '1D', 'teachers': ['Zamora']},
 
     # Art Teachers (Homeroom for KG classes, specific teachers for Grade 1)
-    {'subject': 'Art', 'class': 'Jr. KG A', 'teachers': [HOMEROOM['Jr. KG A']]},
-    {'subject': 'Art', 'class': 'Jr. KG B', 'teachers': [HOMEROOM['Jr. KG B']]},
-    {'subject': 'Art', 'class': 'Jr. KG C', 'teachers': [HOMEROOM['Jr. KG C']]},
-    {'subject': 'Art', 'class': 'Jr. KG D', 'teachers': [HOMEROOM['Jr. KG D']]},
-    {'subject': 'Art', 'class': 'Sr. KG A', 'teachers': [HOMEROOM['Sr. KG A']]},
-    {'subject': 'Art', 'class': 'Sr. KG B', 'teachers': [HOMEROOM['Sr. KG B']]},
-    {'subject': 'Art', 'class': 'Sr. KG C', 'teachers': [HOMEROOM['Sr. KG C']]},
-    {'subject': 'Art', 'class': 'Sr. KG D', 'teachers': [HOMEROOM['Sr. KG D']]},
+    {'subject': 'Art', 'class': 'Jr. KG A', 'teachers': HOMEROOM['Jr. KG A']},
+    {'subject': 'Art', 'class': 'Jr. KG B', 'teachers': HOMEROOM['Jr. KG B']},
+    {'subject': 'Art', 'class': 'Jr. KG C', 'teachers': HOMEROOM['Jr. KG C']},
+    {'subject': 'Art', 'class': 'Jr. KG D', 'teachers': HOMEROOM['Jr. KG D']},
+    {'subject': 'Art', 'class': 'Sr. KG A', 'teachers': HOMEROOM['Sr. KG A']},
+    {'subject': 'Art', 'class': 'Sr. KG B', 'teachers': HOMEROOM['Sr. KG B']},
+    {'subject': 'Art', 'class': 'Sr. KG C', 'teachers': HOMEROOM['Sr. KG C']},
+    {'subject': 'Art', 'class': 'Sr. KG D', 'teachers': HOMEROOM['Sr. KG D']},
     {'subject': 'Art', 'class': '1A', 'teachers': ['Pankaj']},
     {'subject': 'Art', 'class': '1B', 'teachers': ['Shridevi']},
     {'subject': 'Art', 'class': '1C', 'teachers': ['Shridevi']},
@@ -272,18 +272,18 @@ teacher_assignments = [
     {'subject': 'Karate', 'class': '1D', 'teachers': ['RAJU']}, 
     
     # Assembly
-    {'subject': 'Assembly', 'class': 'Jr. KG A', 'teachers': [HOMEROOM['Jr. KG A']]},
-    {'subject': 'Assembly', 'class': 'Jr. KG B', 'teachers': [HOMEROOM['Jr. KG B']]},
-    {'subject': 'Assembly', 'class': 'Jr. KG C', 'teachers': [HOMEROOM['Jr. KG C']]},
-    {'subject': 'Assembly', 'class': 'Jr. KG D', 'teachers': [HOMEROOM['Jr. KG D']]},
-    {'subject': 'Assembly', 'class': 'Sr. KG A', 'teachers': [HOMEROOM['Sr. KG A']]},
-    {'subject': 'Assembly', 'class': 'Sr. KG B', 'teachers': [HOMEROOM['Sr. KG B']]},
-    {'subject': 'Assembly', 'class': 'Sr. KG C', 'teachers': [HOMEROOM['Sr. KG C']]},
-    {'subject': 'Assembly', 'class': 'Sr. KG D', 'teachers': [HOMEROOM['Sr. KG D']]},
-    {'subject': 'Assembly', 'class': '1A', 'teachers': [HOMEROOM['1A']]},
-    {'subject': 'Assembly', 'class': '1B', 'teachers': [HOMEROOM['1B']]},
-    {'subject': 'Assembly', 'class': '1C', 'teachers': [HOMEROOM['1C']]},
-    {'subject': 'Assembly', 'class': '1D', 'teachers': [HOMEROOM['1D']]},
+    {'subject': 'Assembly', 'class': 'Jr. KG A', 'teachers': HOMEROOM['Jr. KG A']},
+    {'subject': 'Assembly', 'class': 'Jr. KG B', 'teachers': HOMEROOM['Jr. KG B']},
+    {'subject': 'Assembly', 'class': 'Jr. KG C', 'teachers': HOMEROOM['Jr. KG C']},
+    {'subject': 'Assembly', 'class': 'Jr. KG D', 'teachers': HOMEROOM['Jr. KG D']},
+    {'subject': 'Assembly', 'class': 'Sr. KG A', 'teachers': HOMEROOM['Sr. KG A']},
+    {'subject': 'Assembly', 'class': 'Sr. KG B', 'teachers': HOMEROOM['Sr. KG B']},
+    {'subject': 'Assembly', 'class': 'Sr. KG C', 'teachers': HOMEROOM['Sr. KG C']},
+    {'subject': 'Assembly', 'class': 'Sr. KG D', 'teachers': HOMEROOM['Sr. KG D']},
+    {'subject': 'Assembly', 'class': '1A', 'teachers': HOMEROOM['1A']},
+    {'subject': 'Assembly', 'class': '1B', 'teachers': HOMEROOM['1B']},
+    {'subject': 'Assembly', 'class': '1C', 'teachers': HOMEROOM['1C']},
+    {'subject': 'Assembly', 'class': '1D', 'teachers': HOMEROOM['1D']},
 ]
 
 teacher_assignments.extend([
@@ -303,51 +303,51 @@ teacher_assignments.extend([
 
 # Role Play (assigned to Homeroom teachers)
 teacher_assignments.extend([
-    {'subject': 'Role Play', 'class': 'Jr. KG A', 'teachers': [HOMEROOM['Jr. KG A']]},
-    {'subject': 'Role Play', 'class': 'Jr. KG B', 'teachers': [HOMEROOM['Jr. KG B']]},
-    {'subject': 'Role Play', 'class': 'Jr. KG C', 'teachers': [HOMEROOM['Jr. KG C']]},
-    {'subject': 'Role Play', 'class': 'Jr. KG D', 'teachers': [HOMEROOM['Jr. KG D']]},
-    {'subject': 'Role Play', 'class': 'Sr. KG A', 'teachers': [HOMEROOM['Sr. KG A']]},
-    {'subject': 'Role Play', 'class': 'Sr. KG B', 'teachers': [HOMEROOM['Sr. KG B']]},
-    {'subject': 'Role Play', 'class': 'Sr. KG C', 'teachers': [HOMEROOM['Sr. KG C']]},
-    {'subject': 'Role Play', 'class': 'Sr. KG D', 'teachers': [HOMEROOM['Sr. KG D']]},
-    {'subject': 'Role Play', 'class': '1A', 'teachers': [HOMEROOM['1A']]},
-    {'subject': 'Role Play', 'class': '1B', 'teachers': [HOMEROOM['1B']]},
-    {'subject': 'Role Play', 'class': '1C', 'teachers': [HOMEROOM['1C']]},
-    {'subject': 'Role Play', 'class': '1D', 'teachers': [HOMEROOM['1D']]}
+    {'subject': 'Role Play', 'class': 'Jr. KG A', 'teachers': HOMEROOM['Jr. KG A']},
+    {'subject': 'Role Play', 'class': 'Jr. KG B', 'teachers': HOMEROOM['Jr. KG B']},
+    {'subject': 'Role Play', 'class': 'Jr. KG C', 'teachers': HOMEROOM['Jr. KG C']},
+    {'subject': 'Role Play', 'class': 'Jr. KG D', 'teachers': HOMEROOM['Jr. KG D']},
+    {'subject': 'Role Play', 'class': 'Sr. KG A', 'teachers': HOMEROOM['Sr. KG A']},
+    {'subject': 'Role Play', 'class': 'Sr. KG B', 'teachers': HOMEROOM['Sr. KG B']},
+    {'subject': 'Role Play', 'class': 'Sr. KG C', 'teachers': HOMEROOM['Sr. KG C']},
+    {'subject': 'Role Play', 'class': 'Sr. KG D', 'teachers': HOMEROOM['Sr. KG D']},
+    {'subject': 'Role Play', 'class': '1A', 'teachers': HOMEROOM['1A']},
+    {'subject': 'Role Play', 'class': '1B', 'teachers': HOMEROOM['1B']},
+    {'subject': 'Role Play', 'class': '1C', 'teachers': HOMEROOM['1C']},
+    {'subject': 'Role Play', 'class': '1D', 'teachers': HOMEROOM['1D']}
 ])
 
 # Play Pen (assigned to Homeroom teachers)
 teacher_assignments.extend([
-    {'subject': 'Play Pen', 'class': 'Jr. KG A', 'teachers': [HOMEROOM['Jr. KG A']]},
-    {'subject': 'Play Pen', 'class': 'Jr. KG B', 'teachers': [HOMEROOM['Jr. KG B']]},
-    {'subject': 'Play Pen', 'class': 'Jr. KG C', 'teachers': [HOMEROOM['Jr. KG C']]},
-    {'subject': 'Play Pen', 'class': 'Jr. KG D', 'teachers': [HOMEROOM['Jr. KG D']]},
-    {'subject': 'Play Pen', 'class': 'Sr. KG A', 'teachers': [HOMEROOM['Sr. KG A']]},
-    {'subject': 'Play Pen', 'class': 'Sr. KG B', 'teachers': [HOMEROOM['Sr. KG B']]},
-    {'subject': 'Play Pen', 'class': 'Sr. KG C', 'teachers': [HOMEROOM['Sr. KG C']]},
-    {'subject': 'Play Pen', 'class': 'Sr. KG D', 'teachers': [HOMEROOM['Sr. KG D']]},
-    {'subject': 'Play Pen', 'class': '1A', 'teachers': [HOMEROOM['1A']]},
-    {'subject': 'Play Pen', 'class': '1B', 'teachers': [HOMEROOM['1B']]},
-    {'subject': 'Play Pen', 'class': '1C', 'teachers': [HOMEROOM['1C']]},
-    {'subject': 'Play Pen', 'class': '1D', 'teachers': [HOMEROOM['1D']]}
+    {'subject': 'Play Pen', 'class': 'Jr. KG A', 'teachers': HOMEROOM['Jr. KG A']},
+    {'subject': 'Play Pen', 'class': 'Jr. KG B', 'teachers': HOMEROOM['Jr. KG B']},
+    {'subject': 'Play Pen', 'class': 'Jr. KG C', 'teachers': HOMEROOM['Jr. KG C']},
+    {'subject': 'Play Pen', 'class': 'Jr. KG D', 'teachers': HOMEROOM['Jr. KG D']},
+    {'subject': 'Play Pen', 'class': 'Sr. KG A', 'teachers': HOMEROOM['Sr. KG A']},
+    {'subject': 'Play Pen', 'class': 'Sr. KG B', 'teachers': HOMEROOM['Sr. KG B']},
+    {'subject': 'Play Pen', 'class': 'Sr. KG C', 'teachers': HOMEROOM['Sr. KG C']},
+    {'subject': 'Play Pen', 'class': 'Sr. KG D', 'teachers': HOMEROOM['Sr. KG D']},
+    {'subject': 'Play Pen', 'class': '1A', 'teachers': HOMEROOM['1A']},
+    {'subject': 'Play Pen', 'class': '1B', 'teachers': HOMEROOM['1B']},
+    {'subject': 'Play Pen', 'class': '1C', 'teachers': HOMEROOM['1C']},
+    {'subject': 'Play Pen', 'class': '1D', 'teachers': HOMEROOM['1D']}
 ])
 
 # Adding SGI and Class Tests for Grade 1 with homeroom (HR) teachers
 teacher_assignments.extend([
     # SGI - Self-Guided Instruction
-    {'subject': 'SGI', 'class': '1A', 'teachers': [HOMEROOM['1A']]},
-    {'subject': 'SGI', 'class': '1B', 'teachers': [HOMEROOM['1B']]},
-    {'subject': 'SGI', 'class': '1C', 'teachers': [HOMEROOM['1C']]},
-    {'subject': 'SGI', 'class': '1D', 'teachers': [HOMEROOM['1D']]}
+    {'subject': 'SGI', 'class': '1A', 'teachers': HOMEROOM['1A']},
+    {'subject': 'SGI', 'class': '1B', 'teachers': HOMEROOM['1B']},
+    {'subject': 'SGI', 'class': '1C', 'teachers': HOMEROOM['1C']},
+    {'subject': 'SGI', 'class': '1D', 'teachers': HOMEROOM['1D']}
 ])
 
 teacher_assignments.extend([
     # Class Tests
-    {'subject': 'Class Tests', 'class': '1A', 'teachers': [HOMEROOM['1A']]},
-    {'subject': 'Class Tests', 'class': '1B', 'teachers': [HOMEROOM['1B']]},
-    {'subject': 'Class Tests', 'class': '1C', 'teachers': [HOMEROOM['1C']]},
-    {'subject': 'Class Tests', 'class': '1D', 'teachers': [HOMEROOM['1D']]}
+    {'subject': 'CLASS TESTS', 'class': '1A', 'teachers': HOMEROOM['1A']},
+    {'subject': 'CLASS TESTS', 'class': '1B', 'teachers': HOMEROOM['1B']},
+    {'subject': 'CLASS TESTS', 'class': '1C', 'teachers': HOMEROOM['1C']},
+    {'subject': 'CLASS TESTS', 'class': '1D', 'teachers': HOMEROOM['1D']}
 ])
 
 
