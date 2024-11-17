@@ -1,6 +1,6 @@
 import numpy as np
 import random
-#from constraints import classes, days, periods_jr_sr_kg, periods_grade_1, subjects, teachers, HOMEROOM, teacher_assignments, subject_constraints
+from constraints import classes, days, periods_jr_sr_kg, periods_grade_1, teacher_assignments, subject_constraints
 
 # Define the dimensions for the tensor (1 week)
 num_days = len(days)  # 5 days (Monday to Friday)
@@ -35,11 +35,15 @@ for class_idx, class_name in enumerate(classes):
             frequency = levels[class_level]
             teacher = get_teacher_for_subject(class_name, subject)
 
-            # Split full and 0.5 frequency subjects
-            if frequency == 0.5:
-                half_period_subjects.append((subject, teacher))
+            # Handle x.5 frequencies
+            if frequency % 1 == 0.5:
+                full_frequency = int(frequency)  # Full part
+                half_period_subjects.append((subject, teacher))  # 0.5 part
+                full_period_subjects.extend([(subject, teacher)] * full_frequency)  # Full part
+            elif frequency == 0.5:
+                half_period_subjects.append((subject, teacher))  # Fully half-period subject
             else:
-                full_period_subjects.extend([(subject, teacher)] * int(frequency))
+                full_period_subjects.extend([(subject, teacher)] * int(frequency))  # Full frequency
 
     # Pair 0.5 frequency subjects with slashes
     half_period_pairs = []
@@ -49,7 +53,9 @@ for class_idx, class_name in enumerate(classes):
             subject_2, teacher_2 = half_period_subjects[i + 1]
             half_period_pairs.append((f"{subject_1} / {subject_2}", f"{teacher_1} / {teacher_2}"))
         else:
-            half_period_pairs.append(half_period_subjects[i])  # Last unpaired subject, if odd
+            # Single unpaired subject is paired with "Free"
+            subject, teacher = half_period_subjects[i]
+            half_period_pairs.append((f"{subject} / Free", f"{teacher} / None"))
 
     # Combine full subjects and half-period pairs
     full_period_subjects.extend(half_period_pairs)
@@ -64,8 +70,6 @@ for class_idx, class_name in enumerate(classes):
                 subject, teacher = full_period_subjects[period_counter]
                 timetable[day, period, class_idx] = {'subject': subject, 'teacher': teacher}
                 period_counter += 1
-            else:
-                timetable[day, period, class_idx] = 'Free'
 
 # Function to print the generated timetable for a specific class
 def print_timetable(class_name):
